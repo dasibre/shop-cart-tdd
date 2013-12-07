@@ -42,12 +42,12 @@ describe "An instance of", Cart do
 				expect(@cart).to_not be_empty
 			end
 
-			it "has total value equal to the sum of each items value times its quantity" do
+			it "has total value of items in cart" do
 				@cart.add_item_to_cart(@item)
 				expect(@cart).to have_total_value(10.00)
 			end
 
-			it "should not change Carts unique item counter when item quantity is increased" do
+			it "should not change total items in Cart when item quantity is increased" do
 				@cart.add_item_to_cart(@item)
 				@cart.add_item_to_cart(@item)
 				expect(@cart.count).to eq(1)
