@@ -6,7 +6,7 @@ class Cart
 		@items = Hash.new(0)
 	end
 
-	def total_value
+	def total_cart_value
 		total = 0
 		each_cart_item(@items) { |item, quantity| total = item.price * quantity }
 		total
